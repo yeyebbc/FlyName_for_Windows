@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appfilte_to_flyme_theme_icons", "appfilte_to_flyme_theme_icons\appfilte_to_flyme_theme_icons.csproj", "{B355AF34-41F7-417C-9B3C-E672A3C6DFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterRepeat", "..\..\source\repos\EnterRepeat\EnterRepeat\EnterRepeat.csproj", "{24B3E390-7988-44E4-B472-0AD87788876C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B355AF34-41F7-417C-9B3C-E672A3C6DFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B355AF34-41F7-417C-9B3C-E672A3C6DFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B355AF34-41F7-417C-9B3C-E672A3C6DFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B355AF34-41F7-417C-9B3C-E672A3C6DFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B3E390-7988-44E4-B472-0AD87788876C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B3E390-7988-44E4-B472-0AD87788876C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B3E390-7988-44E4-B472-0AD87788876C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B3E390-7988-44E4-B472-0AD87788876C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F89C566-41E0-4BD3-8B95-120F0D89748B}
+	EndGlobalSection
+EndGlobal
