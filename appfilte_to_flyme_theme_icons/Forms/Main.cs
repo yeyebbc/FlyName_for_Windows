@@ -175,7 +175,7 @@ namespace appfilte_to_flyme_theme_icons
                 {
                     string a = "ComponentInfo";
                     string m = sr.ReadLine().Trim();
-                    int i = m.IndexOf(a);
+                    int i = m.IndexOf(a); //Get index of "ComponentInfo"
 
                     string file_name;
                     string target_file;
@@ -191,17 +191,24 @@ namespace appfilte_to_flyme_theme_icons
                         
                         //Get the index of the first "/" in the line that has been cut
                         int ii = n.IndexOf("/");
-
-                        //Retrieve package name from line
-                        string flyme_icon_name = n.Substring(0, n.Length - (n.Length - ii))+".png";
-                        string target_flyme_icon_name = System.IO.Path.Combine(path_output, flyme_icon_name);
-
+                        string target_flyme_icon_name;
+                        if (ii != -1 && n.ElementAt(ii+1)!='>')
+                        {
+                            //Retrieve package name from line
+                            string flyme_icon_name = n.Substring(0, n.Length - (n.Length - ii)) + ".png";
+                            target_flyme_icon_name = System.IO.Path.Combine(path_output, flyme_icon_name);
+                        }
+                        else
+                        {
+                            continue;
+                        }
                         //Get the index of the first "drawable=" from line
                         int index_drawable = m.IndexOf("drawable");
                         string mid_str_drawable;
                         int mid_cut;
                         string drawable_icon_name;
-
+                        
+                        
                         if (index_drawable != -1)
                         {
                             mid_str_drawable = m.Substring(index_drawable + "drawable".Length + 2);
@@ -236,6 +243,34 @@ namespace appfilte_to_flyme_theme_icons
                             
 
                             //MessageBox.Show(drawable_icon_name);
+                        }
+                        else
+                        {
+                            string mm=sr.ReadLine().Trim();
+                            //Get the index of the first "drawable=" from line
+                            int index_drawable_newline = mm.IndexOf("drawable");
+                            string mid_str_drawable_newline;
+                            int mid_cut_newline;
+                            string drawable_icon_name_newline;
+
+                            mid_str_drawable_newline = mm.Substring(index_drawable + "drawable".Length + 2);
+                            mid_str_drawable_newline.Trim();
+                            mid_cut_newline = mid_str_drawable_newline.IndexOf("\"");
+
+                            drawable_icon_name_newline = mid_str_drawable_newline.Substring(0, mid_str_drawable_newline.Length - (mid_str_drawable_newline.Length - mid_cut_newline));
+                            drawable_icon_name_newline.Trim();
+
+                            //Copy original icon to Output folder.
+                            file_name = drawable_icon_name_newline + ".png";
+                            string source_file = System.IO.Path.Combine(path_drawable, file_name);
+                            target_file = System.IO.Path.Combine(path_output, file_name);
+
+                            if (System.IO.File.Exists(source_file))
+                            {
+                                //System.IO.File.Copy(source_file, target_file, true);
+                                System.IO.File.Copy(source_file, target_flyme_icon_name, true);
+                                
+                            }
                         }
                     }
                 }

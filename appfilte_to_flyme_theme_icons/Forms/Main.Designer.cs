@@ -150,7 +150,7 @@
             this.groupBox1.Size = new System.Drawing.Size(730, 126);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "New icons Output";
+            this.groupBox1.Text = "Flyme icons Output";
             // 
             // btn_output
             // 
@@ -218,7 +218,7 @@
             this.MinimumSize = new System.Drawing.Size(737, 554);
             this.Name = "main_form";
             this.ShowIcon = false;
-            this.Text = "FlyName";
+            this.Text = "Flyme theme icons Converter";
             this.group_iconpack.ResumeLayout(false);
             this.group_iconpack.PerformLayout();
             this.groupBox1.ResumeLayout(false);
