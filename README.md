@@ -1,4 +1,4 @@
-# FlyName - C#
+# FlyName for Windows
 ![alt text](https://raw.githubusercontent.com/antoniacrespoa2/FlyName-csharp/master/appfilte_to_flyme_theme_icons/Res/designer_tools.png)
 
 ## What it does  
